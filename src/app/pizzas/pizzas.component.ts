@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
-import { PizzaModel } from '../models/pizza.model';
+import { Component, inject, signal } from '@angular/core';
 import { PizzaComponent } from "../pizza/pizza.component";
+import { PizzaService } from './../pizza.service';
+import { PizzaModel } from '../models/pizza.model';
 
 @Component({
   selector: 'app-pizzas',
@@ -10,24 +11,6 @@ import { PizzaComponent } from "../pizza/pizza.component";
   styleUrl: './pizzas.component.scss'
 })
 export class PizzasComponent {
- 
-  readonly pizzas = signal<PizzaModel[]>([
-    {
-      id: 1,
-      name: "Fromage",
-      description: "Sauce tomate (tomates 100% Italiennes), Mozzarella, Emmental fondu",
-      price: 5,
-      category: "Kiosquitos",
-      vegetarian: true
-    },
-    {
-      id: 2,
-      name: "Jambon",
-      description: "Sauce tomate (tomates 100% Italiennes), Jambon supérieur",
-      price: 5,
-      category: "Kiosquitos",
-      vegetarian: false
-    }
-  ]);
-  
+  private readonly PizzaService = inject(PizzaService);
+  readonly pizzas = signal<PizzaModel[]>(this.PizzaService.pizzasList());
 }
