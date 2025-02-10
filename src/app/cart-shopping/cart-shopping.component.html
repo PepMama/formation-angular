@@ -1,0 +1,20 @@
+<button id="openBtn" type="button" class="btn" (click)="openModal()">
+  <i class="fa-solid fa-cart-shopping fa-2x"></i>
+</button>
+
+<div class="modal fade" [class.show]="isModalOpen()" #cartModal>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">PANIER</h4>
+        <button type="button" class="btn-close" (click)="closeModal()"></button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop fade" [class.show]="isModalOpen()" #modalBackdrop></div>
