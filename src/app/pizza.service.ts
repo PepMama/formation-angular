@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { delay, Observable, of } from 'rxjs';
 import { PizzaModel } from './models/pizza.model';
 
 @Injectable({
@@ -6,8 +7,8 @@ import { PizzaModel } from './models/pizza.model';
 })
 export class PizzaService {
 
-  pizzasList(): PizzaModel[] {
-    return [
+  pizzasList(): Observable<PizzaModel[]> {
+    return of([
       {
         id: 1,
         name: "Fromage",
@@ -24,7 +25,7 @@ export class PizzaService {
         category: "Kiosquitos",
         vegetarian: false
       }
-    ]
+    ]).pipe(delay(2000));
   }
   
 }

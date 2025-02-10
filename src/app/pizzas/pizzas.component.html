@@ -2,7 +2,7 @@
   @for (pizza of pizzas(); track pizza.id) {
     @let previousCategory = $first ? null : pizzas()[$index-1].category;
     @if(previousCategory !== pizza.category) {
-      <div class="item-divider">{{ pizza.category }}</div>      
+      <div class="item-divider">{{ pizza.category }}</div>
     }
     <app-pizza [pizza]="pizza"></app-pizza>
   } @empty {
