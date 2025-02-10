@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md">
     <div class="container">
-      <a class="navbar-brand">
+      <a class="navbar-brand" routerLink="/">
         <img src="images/logo-header.png" alt="le Kiosque à pizzas">
       </a>
       <button type="button" class="navbar-toggler" (click)="toggleNavbar()">
@@ -9,7 +9,8 @@
       <div id="navbar" class="navbar-collapse" [class.collapse]="navbarCollapsed()">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link">Nos pizzas</a>
+            <a routerLink="/" class="nav-link">Accueil</a>
+            <a routerLink="/pizzas" class="nav-link">Nos pizzas</a>
           </li>
         </ul>
       </div>

@@ -1,0 +1,53 @@
+#header {
+    height: 450px;
+  
+    picture,
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  
+  #find-us {
+    padding: 3rem 0;
+    background-color: var(--kiosq-color-tertiary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+    .btn {
+      background-color: var(--kiosq-color-secondary);
+      border: 0;
+      border-radius: 23px;
+      font-size: 1rem;
+    }
+  }
+  
+  #company {
+    background-color: var(--kiosq-color-primary);
+    padding: 3rem 0;
+  }
+  
+  .card {
+    background-color: #103a29;
+    height: 185px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .15);
+  
+    i {
+      color: var(--kiosq-color-tertiary);
+      height: 35px;
+    }
+  
+    .card-title {
+      color: white;
+    }
+  
+    .card-body {
+      flex: 0 1 auto;
+    }
+  }
+  
