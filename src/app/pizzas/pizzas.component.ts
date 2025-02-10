@@ -1,4 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { PizzaComponent } from "../pizza/pizza.component";
 import { PizzaService } from './../pizza.service';
 
@@ -13,15 +14,11 @@ export class PizzasComponent {
   private readonly PizzaService = inject(PizzaService);
   // readonly pizzas = signal<PizzaModel[]>(this.PizzaService.pizzasList());
 
-  pizzas$ = this.PizzaService.pizzasList();
+  readonly pizzas = toSignal(this.PizzaService.pizzasList());
+
+  // pour savoir quand la pizza sera disponible
   constructor(){
-    // this.pizzas$.subscribe(pizzas => {
-    //   console.log(pizzas);
-    // });
-    this.pizzas$.subscribe({
-      next: (toto) => console.log("TOut va bien"),
-      error: () => console.log("Tout va bien"),
-      complete: () => console.log("c'est fini") // ici on peut l'utiliser pour un loader, par exemple quand l'observable est terminée, on enlève le loader
-    })
+    effect(() => console.log(this.pizzas()))
   }
+
 }

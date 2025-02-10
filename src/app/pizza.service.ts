@@ -27,5 +27,4 @@ export class PizzaService {
       }
     ]).pipe(delay(2000));
   }
-  
 }

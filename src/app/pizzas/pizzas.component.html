@@ -1,6 +1,6 @@
 <div class="list-group">
   @for (pizza of pizzas(); track pizza.id) {
-    @let previousCategory = $first ? null : pizzas()[$index-1].category;
+    @let previousCategory = $first ? null : pizzas()?.[$index-1]?.category;
     @if(previousCategory !== pizza.category) {
       <div class="item-divider">{{ pizza.category }}</div>
     }
