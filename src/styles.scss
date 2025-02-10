@@ -1,2 +1,20 @@
 // Dans toute l'application, on va charger bootstrap
 @import 'bootstrap/dist/css/bootstrap.css';
+
+:root {
+    --kiosq-color-primary: #174d35;
+    --kiosq-color-primary-contrast: #ffffff;
+    --kiosq-color-primary-shade: #14442f;
+    --kiosq-color-primary-tint: #2e5f49;
+  
+    --kiosq-color-secondary: #960118;
+    --kiosq-color-secondary-contrast: #ffffff;
+    --kiosq-color-secondary-shade: #840115;
+    --kiosq-color-secondary-tint: #a11a2f;
+  
+    --kiosq-color-tertiary: #f89902;
+    --kiosq-color-tertiary-contrast: #000000;
+    --kiosq-color-tertiary-shade: #da8702;
+    --kiosq-color-tertiary-tint: #f9a31b;
+  }
+  

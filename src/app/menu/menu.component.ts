@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-
+  readonly navbarCollapsed = signal(true);
+  toggleNavbar(){
+    this.navbarCollapsed.update(isCollapsed  => !isCollapsed);
+  }
 }

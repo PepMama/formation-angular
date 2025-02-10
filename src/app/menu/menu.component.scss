@@ -1,0 +1,14 @@
+.navbar-brand img {
+    height: 50px;
+  }
+  
+  .nav-link {
+    font-weight: bold;
+    color: var(--kiosq-color-primary);
+    cursor: pointer;
+  
+    &:hover {
+      color: var(--kiosq-color-secondary);
+    }
+  }
+  
