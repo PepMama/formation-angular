@@ -9,8 +9,8 @@
       <div id="navbar" class="navbar-collapse" [class.collapse]="navbarCollapsed()">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a routerLink="/" class="nav-link">Accueil</a>
-            <a routerLink="/pizzas" class="nav-link">Nos pizzas</a>
+            <a routerLink="/" class="nav-link" (click)="toggleNavbar()">Accueil</a>
+            <a routerLink="/pizzas" class="nav-link" (click)="toggleNavbar()">Nos pizzas</a>
           </li>
         </ul>
       </div>
