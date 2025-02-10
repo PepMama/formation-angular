@@ -1,0 +1,21 @@
+<div class="list-group-item py-3">
+    @if(pizza().vegetarian){
+      <div class="vegetarian">
+        <i class="fa-solid fa-leaf"></i>
+        <span class="small">Végétarienne</span>
+      </div>
+    }
+    <div class="d-flex w-100">
+      <div class="me-auto">
+        <h6 class="mb-1 name">{{ pizza().name }}</h6>
+        <p class="desc small">{{ pizza().description }}</p>
+        <span class="badge rounded-pill p-2">{{ pizza().price | currency:'EUR' }}</span>
+      </div>
+      <div class="d-flex align-items-center ps-5 pe-2">
+        <button class="btn btn-circle">
+          <i class="fa-solid fa-pizza-slice"></i>
+        </button>
+      </div>
+    </div>
+</div>
+  

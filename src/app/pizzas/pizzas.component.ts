@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { PizzaModel } from '../models/pizza.model';
+import { PizzaComponent } from "../pizza/pizza.component";
 
 @Component({
   selector: 'app-pizzas',
   standalone: true,
-  imports: [],
+  imports: [PizzaComponent],
   templateUrl: './pizzas.component.html',
   styleUrl: './pizzas.component.scss'
 })
