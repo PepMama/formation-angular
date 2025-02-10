@@ -1,0 +1,16 @@
+<ul>
+    @for (pizza of pizzas(); track pizza.id) {
+      <li><span class="h4">{{ pizza.name }}</span>
+        <ul>
+          <li>description: {{ pizza.description }}</li>
+          <li>prix: {{ pizza.price }} €</li>
+          <li>veggie: {{ pizza.vegetarian ? 'oui':'non' }}</li>
+        </ul>
+      </li>
+    } @empty {
+      <div class="alert alert-danger" style="width: fit-content;" role="alert">
+        Aucune pizza, c'est triste
+      </div>
+    }
+  </ul>
+  
